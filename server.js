@@ -23,7 +23,7 @@ app.use(function validateBearerToken(req, res, next) {
   }
   next();
 });
-app.get('/moviedex', function handleGetMovie(req,res){
+app.get('/movie', function handleGetMovie(req,res){
   let response = MOVIES;
   if(req.query.genre){
     response = response.filter(movie =>
